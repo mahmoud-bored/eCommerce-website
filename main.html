@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Bootstrap Css-->
+    <link rel="stylesheet" href="css\bootstrap.min.css">
+    <!-- My Css -->
+    <link rel="stylesheet" type="text/css" href="css\style.css">
+
+</head>
+<body>
+
+    <div class="sign-block-click sign-card-first-state" onclick="showHideSignCard('hide')"></div>
+    <div class="sign-card-container sign-card-first-state">
+        <div class="signin-card-container show-sign-card" onclick="showSignCards('signin')">
+            <div class="signin-title">Signin</div>
+            <div class="signin-card">
+                <div class="signin-inputs">
+                    <input class="signin-input" type="email" placeholder="E-mail">
+                    <input class="signin-input" type="password" placeholder="Password">
+                </div>
+                <div class="signin-buttons">
+                    <button class="btn btn-secondary signin-button" onclick="showHideSignCard('hide')">Cancel</button>
+                    <button class="btn btn-primary signin-button">Signin</button>
+                </div>
+            </div>
+        </div>
+        <div class="signup-card-container sign-card-container-hover cut-signup-card" onclick="showSignCards('signup')">
+            <div class="signup-title">signup</div>
+            <div class="signup-card">
+                <div class="signup-inputs-container">
+                    <div class="signup-name-inputs">
+                        <input class="signup-name-input" type="text" placeholder="First Name">
+                        <input class="signup-name-input" type="text" placeholder="Last Name">
+                    </div>
+                    <div class="signup-inputs">
+                        <input class="signup-input" type="email" placeholder="E-mail">
+                        <input class="signup-input" type="password" placeholder="Password">
+                    </div>
+                </div>
+
+                <div class="signup-buttons">
+                    <button class="btn btn-secondary signup-button" onclick="showHideSignCard('hide')">Cancel</button>
+                    <button class="btn btn-primary signup-button">signup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="options-block-click" onclick="openOptionsCard('None', 'close', 'None')"></div>
+    <div class="options-cards-container options-cards-container-first-state">
+        <div class="option-card profile-card-container profile-card-container-cut" onclick="activateOptionCard('profile')">
+            <div class="options-card-title-container profile-card-title-container">
+                <div class="option-card-title profile-card-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16"><path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/><path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/></svg>
+                    &nbsp;
+                    Profile
+                </div>
+            </div>
+        </div>
+        <div class="option-card wishlist-card-container wishlist-card-container-cut" onclick="activateOptionCard('wishlist')">
+            <div class="options-card-title-container wishlist-card-title-container">
+                <div class="option-card-title wishlist-card-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16"><path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/></svg>
+                    &nbsp;
+                    Wishlist
+                </div>
+            </div>
+        </div>
+        <div class="option-card orders-card-container orders-card-container-cut" onclick="activateOptionCard('orders')">
+            <div class="options-card-title-container orders-card-title-container">
+                <div class="option-card-title orders-card-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16"><path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/><path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/></svg>
+                    &nbsp;
+                    Orders
+                </div>
+            </div>
+        </div>
+        <div class="option-card addresses-card-container addresses-card-container-cut" onclick="activateOptionCard('addresses')">
+            <div class="options-card-title-container addresses-card-title-container">
+                <div class="option-card-title addresses-card-title">
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="22" fill="currentColor" height="30" viewBox="0 0 163.000000 238.000000" preserveAspectRatio="xMidYMid meet">
+                        <g transform="translate(0.000000,238.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+                            <path d="M591 2344 c-147 -43 -233 -95 -347 -209 -91 -90 -106 -110 -152 -205
+                            -80 -167 -102 -298 -83 -486 39 -364 211 -750 501 -1123 93 -120 277 -311 300
+                            -311 23 0 207 191 300 311 395 508 579 1067 479 1457 -39 153 -147 317 -280
+                            423 -78 64 -219 131 -316 153 -115 25 -298 21 -402 -10z m367 -50 c47 -9 118
+                            -35 181 -65 87 -43 116 -63 186 -132 117 -117 179 -230 211 -387 32 -159 4
+                            -403 -71 -625 -37 -108 -149 -339 -219 -453 -101 -163 -295 -410 -400 -511
+                            l-36 -35 -36 35 c-105 101 -299 348 -400 511 -71 116 -183 347 -219 453 -76
+                            225 -103 465 -71 625 32 156 94 270 210 385 176 175 421 248 664 199z"/>
+                            <path d="M625 2122 c-103 -35 -169 -77 -244 -158 -102 -108 -155 -247 -154
+                            -399 1 -253 168 -478 413 -556 91 -30 249 -30 340 0 196 63 355 233 401 431
+                            67 290 -107 595 -393 685 -114 36 -252 35 -363 -3z m347 -63 c169 -56 294
+                            -192 339 -369 75 -295 -125 -588 -430 -632 -351 -51 -653 272 -577 616 30 133
+                            97 237 201 311 143 102 307 128 467 74z"/>
+                            <path d="M616 1808 c-99 -84 -184 -160 -190 -170 -17 -28 10 -48 65 -48 l49 0
+                            0 -164 c0 -128 3 -166 14 -175 9 -8 47 -11 107 -9 l94 3 5 105 5 105 45 0 45
+                            0 5 -105 5 -105 94 -3 c60 -2 98 1 107 9 11 9 14 47 14 175 l0 164 49 0 c51 0
+                            78 18 68 44 -9 22 -369 326 -386 326 -9 0 -97 -69 -195 -152z m328 -38 c86
+                            -72 120 -106 108 -109 -40 -8 -42 -19 -42 -187 l0 -164 -45 0 -45 0 0 98 c0
+                            63 -4 102 -12 110 -7 7 -44 12 -98 12 -54 0 -91 -5 -98 -12 -8 -8 -12 -47 -12
+                            -110 l0 -98 -45 0 -45 0 0 164 c0 168 -2 179 -42 187 -12 3 23 38 110 111 70
+                            59 130 107 134 105 4 -1 64 -49 132 -107z"/>
+                        </g>
+                    </svg>
+                    &nbsp;
+                    Addresses
+                </div>
+
+            </div>
+        </div>
+        <div class="option-card payments-card-container payments-card-container-cut" onclick="activateOptionCard('payments')">
+            <div class="options-card-title-container payments-card-title-container">
+                <div class="option-card-title payments-card-title">
+                    <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" fill="currentColor" height="25" viewBox="0 0 512.002 512.002" width="25" xmlns="http://www.w3.org/2000/svg"><g><path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"/><path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"/></g></svg>
+                    &nbsp;
+                    Payments
+                </div>
+            </div>
+        </div>
+        <div class="option-card cart-card-container cart-card-container-cut" onclick="activateOptionCard('cart')">
+            <div class="options-card-title-container cart-card-title-container">
+                <div class="option-card-title cart-card-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 50.703 46.882">
+                        <g transform="translate(-19.297 -21.059)">
+                            <path d="M16.711,40.506a4.7,4.7,0,1,0,0,9.376,4.7,4.7,0,1,0,0-9.376ZM1.5,3V7.688H6.57L15.7,25.48l-3.422,5.743a4.27,4.27,0,0,0-.634,2.25,4.9,4.9,0,0,0,5.07,4.688H47.133V33.473H17.776a.605.605,0,0,1-.634-.586l.076-.281L19.5,28.785H38.387a5.123,5.123,0,0,0,4.437-2.414L51.9,11.157a2.155,2.155,0,0,0,.3-1.125,2.452,2.452,0,0,0-2.535-2.344H12.173L9.79,3ZM42.062,40.506a4.7,4.7,0,1,0,5.07,4.688A4.882,4.882,0,0,0,42.062,40.506Z" transform="translate(17.797 18.059)" fill="#fff"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="option-card close-card-container close-card-container-cut" onclick="openOptionsCard('close', 'close', 'close')">
+            <div class="options-card-title-container close-card-title-container">
+                <div class="option-card-title close-card-title">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" fill="#ffffff" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve">
+                        <g>
+                            <g id="_x31_0_41_">
+                                <g>
+                                    <path d="M415.338,196.662c-7.535-7.535-19.737-7.535-27.253,0l-82.181,82.18l-81.033-81.032c-7.478-7.478-19.584-7.478-27.042,0
+                                        c-7.478,7.478-7.478,19.584,0,27.042l81.033,81.033l-81.587,81.587c-7.535,7.535-7.535,19.736,0,27.253s19.737,7.517,27.253,0
+                                        l81.588-81.587l81.032,81.032c7.478,7.478,19.584,7.478,27.043,0c7.478-7.478,7.478-19.584,0-27.043l-81.033-81.032l82.181-82.18
+                                        C422.873,216.399,422.873,204.179,415.338,196.662z M306,0C136.992,0,0,136.992,0,306s136.992,306,306,306
+                                        c168.988,0,306-137.012,306-306S475.008,0,306,0z M306,573.75C158.125,573.75,38.25,453.875,38.25,306
+                                        C38.25,158.125,158.125,38.25,306,38.25c147.875,0,267.75,119.875,267.75,267.75C573.75,453.875,453.875,573.75,306,573.75z"/>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="block-click" onclick="hideBlockClick()"></div>
+    <div class="sidebar">
+        <div class="sidebar-navigator sidebar-hover" onclick="openSidebar()">
+            <svg class="sidebar-arrow" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 33.91 57.029">
+                <path d="M3.888,0H7.777V36.291a3.888,3.888,0,0,1-7.777,0V3.888A3.888,3.888,0,0,1,3.888,0Z" transform="translate(0 28.618) rotate(-45)" fill="#e9e9e9"/>
+                <path d="M3.888,1A2.892,2.892,0,0,0,1,3.888v32.4a2.888,2.888,0,1,0,5.777,0V1H3.888m0-1H7.777V36.291a3.888,3.888,0,1,1-7.777,0V3.888A3.888,3.888,0,0,1,3.888,0Z" transform="translate(0 28.618) rotate(-45)" fill="#8f8f8f"/>
+                <path d="M0,0H3.888A3.888,3.888,0,0,1,7.777,3.888v32.4a3.888,3.888,0,0,1-7.777,0Z" transform="translate(5.499 33.91) rotate(-135)" fill="#e9e9e9"/>
+                <path d="M1,1V36.291a2.888,2.888,0,1,0,5.777,0V3.888A2.892,2.892,0,0,0,3.888,1H1M0,0H3.888A3.888,3.888,0,0,1,7.777,3.888v32.4a3.888,3.888,0,1,1-7.777,0Z" transform="translate(5.499 33.91) rotate(-135)" fill="#8f8f8f"/>
+            </svg>
+        </div>
+        <div class="sidebar-content-container">
+            <div class="sidebar-content">
+                <div class="sidebar-content-title">
+                    <div class="signin-button-container" onclick="showHideSignCard('show')">
+                        <a class="signin-button-link" href="#">
+                            <svg class="signin-svg" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                            </svg>
+                            <span class="signin-button-text">Signin</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="sidebar-main-content">
+                    <div class="sidebar-button" onclick="openOptionsCard('sidebar', 'open', 'profile')">
+                        <div class="sidebar-button-items">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16"><path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/><path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/></svg>
+                            <div class="sidebar-button-text">Profile</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-button" onclick="openOptionsCard('sidebar', 'open', 'wishlist')">
+                        <div class="sidebar-button-items">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16"><path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/></svg>
+                            <div class="sidebar-button-text">Wishlist</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-button" onclick="openOptionsCard('sidebar', 'open', 'orders')">
+                        <div class="sidebar-button-items">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16"><path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/><path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/></svg>
+                            <div class="sidebar-button-text">Orders</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-button" onclick="openOptionsCard('sidebar', 'open', 'addresses')">
+                        <div class="sidebar-button-items">
+                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" height="25" viewBox="0 0 163.000000 238.000000" preserveAspectRatio="xMidYMid meet">
+                                <g transform="translate(0.000000,238.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none">
+                                    <path d="M591 2344 c-147 -43 -233 -95 -347 -209 -91 -90 -106 -110 -152 -205
+                                    -80 -167 -102 -298 -83 -486 39 -364 211 -750 501 -1123 93 -120 277 -311 300
+                                    -311 23 0 207 191 300 311 395 508 579 1067 479 1457 -39 153 -147 317 -280
+                                    423 -78 64 -219 131 -316 153 -115 25 -298 21 -402 -10z m367 -50 c47 -9 118
+                                    -35 181 -65 87 -43 116 -63 186 -132 117 -117 179 -230 211 -387 32 -159 4
+                                    -403 -71 -625 -37 -108 -149 -339 -219 -453 -101 -163 -295 -410 -400 -511
+                                    l-36 -35 -36 35 c-105 101 -299 348 -400 511 -71 116 -183 347 -219 453 -76
+                                    225 -103 465 -71 625 32 156 94 270 210 385 176 175 421 248 664 199z"/>
+                                    <path d="M625 2122 c-103 -35 -169 -77 -244 -158 -102 -108 -155 -247 -154
+                                    -399 1 -253 168 -478 413 -556 91 -30 249 -30 340 0 196 63 355 233 401 431
+                                    67 290 -107 595 -393 685 -114 36 -252 35 -363 -3z m347 -63 c169 -56 294
+                                    -192 339 -369 75 -295 -125 -588 -430 -632 -351 -51 -653 272 -577 616 30 133
+                                    97 237 201 311 143 102 307 128 467 74z"/>
+                                    <path d="M616 1808 c-99 -84 -184 -160 -190 -170 -17 -28 10 -48 65 -48 l49 0
+                                    0 -164 c0 -128 3 -166 14 -175 9 -8 47 -11 107 -9 l94 3 5 105 5 105 45 0 45
+                                    0 5 -105 5 -105 94 -3 c60 -2 98 1 107 9 11 9 14 47 14 175 l0 164 49 0 c51 0
+                                    78 18 68 44 -9 22 -369 326 -386 326 -9 0 -97 -69 -195 -152z m328 -38 c86
+                                    -72 120 -106 108 -109 -40 -8 -42 -19 -42 -187 l0 -164 -45 0 -45 0 0 98 c0
+                                    63 -4 102 -12 110 -7 7 -44 12 -98 12 -54 0 -91 -5 -98 -12 -8 -8 -12 -47 -12
+                                    -110 l0 -98 -45 0 -45 0 0 164 c0 168 -2 179 -42 187 -12 3 23 38 110 111 70
+                                    59 130 107 134 105 4 -1 64 -49 132 -107z"/>
+                                </g>
+                            </svg>
+                            <div class="sidebar-button-text">Addresses</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-button" onclick="openOptionsCard('sidebar', 'open', 'payments')">
+                        <div class="sidebar-button-items">
+                            <svg id="Capa_1" enable-background="new 0 0 512.002 512.002" fill="currentColor" height="25" viewBox="0 0 512.002 512.002" width="25" xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <path d="m502.903 96.829c-6.634-7.842-15.924-12.632-26.161-13.487l-360.557-30.106c-10.238-.855-20.192 2.328-28.035 8.961-7.811 6.607-12.594 15.85-13.476 26.037l-7.254 68.056h-28.965c-21.204 0-38.455 17.251-38.455 38.455v225.702c0 21.204 17.251 38.455 38.455 38.455h361.813c21.205 0 38.456-17.251 38.456-38.455v-36.613l12.839 1.072c1.083.09 2.16.135 3.228.135 19.768 0 36.62-15.209 38.294-35.257l18.781-224.919c.854-10.237-2.329-20.193-8.963-28.036zm-464.448 79.461h361.813c10.176 0 18.456 8.279 18.456 18.455v20.566h-398.724v-20.566c0-10.176 8.279-18.455 18.455-18.455zm-18.455 59.021h398.724v41.489h-398.724zm380.268 203.591h-361.813c-10.176 0-18.455-8.279-18.455-18.455v-123.647h398.724v123.647c0 10.176-8.28 18.455-18.456 18.455zm91.667-315.702-18.781 224.919c-.847 10.141-9.788 17.706-19.927 16.856l-14.503-1.211v-169.019c0-21.204-17.251-38.455-38.456-38.455h-312.734l7.039-66.04c.008-.076.015-.151.021-.228.847-10.141 9.783-17.705 19.927-16.855l360.558 30.106c4.913.41 9.372 2.709 12.555 6.473s4.711 8.541 4.301 13.454z"/>
+                                    <path d="m376.873 326.532h-96.242c-5.523 0-10 4.477-10 10v62.789c0 5.523 4.477 10 10 10h96.242c5.523 0 10-4.477 10-10v-62.789c0-5.523-4.477-10-10-10zm-10 62.789h-76.242v-42.789h76.242z"/>
+                                </g>
+                            </svg>
+                            <div class="sidebar-button-text">Payments</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="navbar-container global-navbar-container">
+        <div class="navbar-items-container">
+            <div class="cart-signin-container">
+                <div class="cart-icon-container"  onclick="openOptionsCard('navbar', 'open', 'cart')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 50.703 46.882">
+                        <g transform="translate(-19.297 -21.059)">
+                            <path d="M16.711,40.506a4.7,4.7,0,1,0,0,9.376,4.7,4.7,0,1,0,0-9.376ZM1.5,3V7.688H6.57L15.7,25.48l-3.422,5.743a4.27,4.27,0,0,0-.634,2.25,4.9,4.9,0,0,0,5.07,4.688H47.133V33.473H17.776a.605.605,0,0,1-.634-.586l.076-.281L19.5,28.785H38.387a5.123,5.123,0,0,0,4.437-2.414L51.9,11.157a2.155,2.155,0,0,0,.3-1.125,2.452,2.452,0,0,0-2.535-2.344H12.173L9.79,3ZM42.062,40.506a4.7,4.7,0,1,0,5.07,4.688A4.882,4.882,0,0,0,42.062,40.506Z" transform="translate(17.797 18.059)" fill="#585858"/>
+                        </g>
+                    </svg>
+                </div>
+                
+                <div class="signin-button-container" onclick="showHideSignCard('show')">
+                    <a class="signin-button-link" href="#">
+                        <svg class="signin-svg" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                        </svg>
+                        <span class="signin-button-text">Signin</span>
+                    </a>
+                </div>
+            </div>
+
+            <input class="search-input navbar-search-input" type="text" placeholder="Search">
+
+            <div class="language-container">
+                <div class="ar-container">ar</div>
+                <div class="en-container">en</div>
+            </div>
+        </div>
+    </div>
+    <img class="sticky-navbar-background" src="images/navbar-background.png">
+
+
+
+    <div class="content-right-left-spacing">
+
+        <div class="page-container">
+
+
+
+
+
+        </div>
+    
+    </div>
+    <div class="footer"></div>
+    
+
+
+
+    <!-- Bootstrap Javascript -->
+    <script src="js\bootstrap.min.js"></script>
+    <!-- My Javascript -->
+    <script src="js\mainJs.js"></script>
+</body>
+</html>
